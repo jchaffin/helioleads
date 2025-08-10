@@ -1,0 +1,32 @@
+{
+  "name": "helioleads",
+  "private": true,
+  "version": "0.1.0",
+  "description": "HelioLeads monorepo: dashboard and dialer",
+  "workspaces": [
+    "apps/*",
+    "shared"
+  ],
+  "scripts": {
+    "dev:shared": "npm run dev --workspace @helio/shared",
+    "dev:dashboard": "npm run dev --workspace @helio/dashboard",
+    "dev:dialer": "npm run dev --workspace @helio/dialer",
+    "build": "npm run build --workspace @helio/shared && npm run build --workspace @helio/dialer && npm run build --workspace @helio/dashboard",
+    "start:dashboard": "npm run start --workspace @helio/dashboard",
+    "start:dialer": "npm run start --workspace @helio/dialer",
+    "lint": "echo 'TODO: add linter'",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "29.5.12",
+    "jest": "29.7.0",
+    "ts-jest": "29.2.5"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1"
+  }
+}

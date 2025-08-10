@@ -1,0 +1,31 @@
+{
+  "name": "@helio/dialer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.864.0",
+    "@fastify/websocket": "8.3.1",
+    "@helio/shared": "*",
+    "cheerio": "^1.1.2",
+    "csv-writer": "^1.6.0",
+    "dotenv": "16.4.5",
+    "fastify": "^4.28.1",
+    "got": "^14.4.7",
+    "p-limit": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.14.9",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^30.0.5",
+    "ts-jest": "^29.2.5",
+    "tsx": "4.17.0",
+    "typescript": "^5.5.4"
+  }
+}
