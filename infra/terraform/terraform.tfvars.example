@@ -1,0 +1,23 @@
+region = "us-east-1"
+project_name = "helioleads"
+
+# Recommend locking to your IP in production, e.g. "1.2.3.4/32"
+cidr_allow = "0.0.0.0/0"
+
+# RDS
+db_username = "solarbot"
+db_password = "changeme"
+db_instance_class = "db.t4g.micro"
+db_allocated_storage = 20
+db_publicly_accessible = true
+db_multi_az = false
+
+# Redis
+redis_node_type = "cache.t4g.micro"
+
+# Secrets (optional: can be set post-provision with console/CLI)
+openai_api_key = ""
+twilio_account_sid = ""
+twilio_auth_token = ""
+elevenlabs_api_key = ""
+

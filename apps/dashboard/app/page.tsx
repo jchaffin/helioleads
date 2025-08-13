@@ -1,17 +1,30 @@
+'use client'
+
+import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
+import LandingPage from '../components/LandingPage'
+import Dashboard from '../components/Dashboard'
+
 export default function Page() {
-  return (
-    <main style={{ padding: 24 }}>
-      <h1>HelioLeads</h1>
-      <p>Dashboard is running. API routes are under /api.</p>
-      <ul>
-        <li>
-          TwiML webhook: <code>/api/voice</code>
-        </li>
-        <li>
-          Status callback: <code>/api/voice-status</code>
-        </li>
-      </ul>
-    </main>
-  );
+  const { data: session, status } = useSession()
+  const router = useRouter()
+
+  if (status === 'loading') {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-orange-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-orange-500 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (session) {
+    return <Dashboard />
+  }
+
+  return <LandingPage />
 }
 

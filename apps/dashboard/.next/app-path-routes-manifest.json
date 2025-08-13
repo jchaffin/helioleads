@@ -1,0 +1,13 @@
+{
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/api/protected/route": "/api/protected",
+  "/api/leads/route": "/api/leads",
+  "/api/voice-status/route": "/api/voice-status",
+  "/api/voice/route": "/api/voice",
+  "/_not-found/page": "/_not-found",
+  "/dashboard/calendar/page": "/dashboard/calendar",
+  "/dashboard/page": "/dashboard",
+  "/auth/signin/page": "/auth/signin",
+  "/page": "/",
+  "/dashboard/leads/page": "/dashboard/leads"
+}

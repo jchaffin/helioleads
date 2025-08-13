@@ -8,6 +8,7 @@
     "shared"
   ],
   "scripts": {
+    "dev": "npm run dev --workspace @helio/dashboard",
     "dev:shared": "npm run dev --workspace @helio/shared",
     "dev:dashboard": "npm run dev --workspace @helio/dashboard",
     "dev:dialer": "npm run dev --workspace @helio/dialer",
@@ -27,6 +28,7 @@
     "node": ">=18.17"
   },
   "dependencies": {
-    "dotenv": "^17.2.1"
+    "dotenv": "^17.2.1",
+    "tailwindcss": "^4.1.11"
   }
 }
